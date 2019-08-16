@@ -1,0 +1,73 @@
+create table CustomerRecord(
+customerID int auto_increment primary key,
+name varchar(20),
+email varchar(20),
+mobileNo int(11),
+address varchar(50),
+DOB int(11),
+securityQuestion varchar(100),
+answre varchar(50)
+);
+
+
+
+
+create table CustomerCare(
+staffID int auto_increment primary key,
+name varchar(20),
+email varchar(20),
+mobileNo int(11),
+address varchar(50),
+DOB int(11),
+securityQuestion varchar(100),
+answre varchar(50)
+);
+
+
+create table feedback(
+queryID int,
+customerID int,
+ FOREIGN KEY(customerID) REFERENCES CustomerRecord(customerID),
+query varchar(100),
+answere varchar(200),
+date int(12)
+);
+
+
+create table policycatagory(
+catagoryID int primary key auto_increment;
+catagory varchar(20)
+);
+
+create table lifeinsurance(
+policyNO int primary key auto_increment,
+policyName varchar(20),
+period int,
+premium int,
+amount int,
+catagoryID int,
+foreign key(catagoryID) REFERENCES policycatagory(catagoryID)
+);
+
+
+create table twowheeler(
+policyNO int primary key auto_increment,
+policyName varchar(20),
+period int,
+premium int,
+amount int,
+catagoryID int,
+foreign key(catagoryID) REFERENCES policycatagory(catagoryID)
+);
+
+
+
+create table fourwheeler(
+policyNO int primary key auto_increment,
+policyName varchar(20),
+period int,
+premium int,
+amount int,
+catagoryID int,
+foreign key(catagoryID) REFERENCES policycatagory(catagoryID)
+);
