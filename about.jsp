@@ -9,6 +9,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <link rel="stylesheet" href="about.css">
+      
+        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript" ></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
         <title>ABAP</title>
     </head>
     <body>
@@ -18,13 +28,49 @@
        <jsp:include page="header.jsp"/>
       </header>
       
-      <p>
-          Insurance is a means of protection from financial loss. It is a form of risk management, primarily used to hedge against the risk of a contingent or uncertain loss.
+      
+     
+ 
+     
+            <h1 >About ABAP</h1>
+      <h2 style="color: cadetblue"> Innovation is in our name</h2>
+   <p>
+     The Apna Bharat Apni Policy Group of Insurance Companies has always lived up to its name by being one step ahead of the insurance industry, and finding new and affordable insurance solutions. We began in 2019 with the first drive-in claims office, became the first to introduce reduced rates for low-risk drivers, and then changed the insurance shopping experience by offering comparison rates on the Web.
+    ABAP continues to find better ways to serve you with our personalized Snapshot® program and our Name Your Price® car insurance shopping option.
+   </p>
+     
+           
+    
+   
+   <div class="row">
+          <div class="col-6">
+<h2 style="color: #4e44c8">ABAP Overview</h2>
+<p>Get to know Progressive better. Meet some of the people who make a difference in our company, learn about our core values and history, and see some of the things Progressive has accomplished over the years.
+</p>
+    
 
-An entity which provides insurance is known as an insurer, insurance company, insurance carrier or underwriter. A person or entity who buys insurance is known as an insured or as a policyholder. The insurance transaction involves the insured assuming a guaranteed and known relatively small loss in the form of payment to the insurer in exchange for the insurer's promise to compensate the insured in the event of a covered loss. The loss may or may not be financial, but it must be reducible to financial terms, and usually involves something in which the insured has an insurable interest established by ownership, possession, or pre-existing relationship.
+     <h2 style="color: #4e44c8">Newsroom</h2>
+<p>
+Are you a member of the media? Our Newsroom contains our press kit, news releases, useful statistics, and videos.
+</p>
 
-The insured receives a contract, called the insurance policy, which details the conditions and circumstances under which the insurer will compensate the insured. The amount of money charged by the insurer to the Policyholder for the coverage set forth in the insurance policy is called the premium. If the insured experiences a loss which is potentially covered by the insurance policy, the insured submits a claim to the insurer for processing by a claims adjuster. The insurer may hedge its own risk by taking out reinsurance, whereby another insurance company agrees to carry some of the risk, especially if the primary insurer deems the risk too large for it to carry.
-      </p>
+
+<h2 style="color: #4e44c8">TV Commercials</h2>
+<p>
+Can’t get enough of Flo? Watch our Progressive commercials online any time you want.
+</p></div>
+          <div class="col-5">
+
+              
+              <h2 style="color: #4e44c8">Investors</h2>
+<p>
+Get timely updates through conference calls, webcasts and presentations, and shareholders' reports.
+</p>
+<h2 style="color: #4e44c8">Careers</h2>
+<p>
+Progressive has been rated one of the top places to start a career because we develop and grow business leaders. View and apply for open positions, and join our network so we can let you know when we have new opportunities.</p>
+          </div></div>
+ 
       
     </body>
 </html>
