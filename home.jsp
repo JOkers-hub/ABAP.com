@@ -1,34 +1,44 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>ABAP Insurance</title>
-        
-    </head>
-    <body >
-        <header>
-            <jsp:include page="header.jsp"/>
-        </header>
+<head>
+<meta charset="ISO-8859-1">
+<title>ABAP Insurance</title>
+<style >
+   .myslides{
+                display:none;
+                width:100%;
+   }
+</style>
+</head>
+<body style="margin:0px;padding:0px; width:100%; height:900px">
+<header>
+    <jsp:include page="header.jsp"/>
+</header>
+ <div style="width:100%;border:2px solid black; height:600px">
+            <img class="myslides" src="home7.jpg" widht="99%"px height="600"/>
+            <img class="myslides" src="home3.jpg" widht="99%"px height="600" />
+            <img class="myslides" src="home5.jpg" widht="99%"px height="600" />
+            <img class="myslides" src="home6.jpg" widht="99%"px height="600"/>
+        </div>
+<div style="width:100%;height:250px">
+                <jsp:include page="footer.jsp"/>
+</div>    
 
-        <table>
-            <tr>
-                <td colspan="8">
-                      
-                      <h1 style="color: #1c7430; font-size: 178px;text-align:left;padding:0px 0px 0px 150px;">"</h1>
-                      <p style="color: #1e7e34; font-size: 50px; text-align:left;padding:0px 0px 0px 130px; ">
-                         ABAP reverses the
-                         traditional insurance
-                         model. We treat the
-                         premiums you pay as if
-                         it's your money, not
-                         ours. With ABAP,
-                         everything becomes
-                         simple and transparent.
-                     </p><h1 style="color: #1c7430; font-size: 178px;text-align:right;padding:0px 0px 0px 300px;">"</h1>
-      
-                     
-                </td>
-                <td colspan="6">
-                    <img src="car.jpg" style="width: 100%;height: 700px;">
-                </td>
-            </tr>
-        </table>  
-    </body></html>
+        <script>
+            var myIndex = 0;
+            carousel();
+            function carousel(){
+                var i;
+                var x= document.getElementsByClassName("myslides");
+                for(i=0; i<x.length; i++){
+                    x[i].style.display="none";
+                }
+                myIndex++;
+                if(myIndex > x.length) {myIndex = 1}
+                x[myIndex-1].style.display = "block";
+                setTimeout(carousel,4000);
+                }
+            </script>
+          
+</body></html>
