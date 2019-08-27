@@ -1,34 +1,61 @@
 
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
     <head>
-        <link rel="stylesheet" href="css/s1.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>footer page</title>
+        <style>
+            .id{
+                width:25%;
+              
+                font-size:17px;            
+               
+               height:50px;
+              text-align:center;
+                color:white;
+                margin:4px;
+            }
+            a{
+                color:white;
+                
+            }
+       
+        </style>
+      
     </head>
-            
-    <footer>
-        <div class="container">
-            <div class="social">
-           
-           <p style="width:60%;height:25vh;padding:15px 30px 19px 35px;font-size:20px;color:#ffffff;">© 2019 ABAP Inc. ABAP?s trademark may be used only with permission from ABAP.
+    <body >
+
+        <div style="width:100% ; height:300px; background-color: black" >
+            <div style="width:49%; height:280px; float:left">
+                <p style="color:white;margin-top:25px;word-spacing:6px;letter-spacing:1.5px;font-size:15px; font-weight:lighter; font-family: serif ">Â© 2019 ABAP Insurance. ABAP trademark may be used only with permission from ABAP.
                All rights reserved. Some insurance products are underwritten by insurers in the National General Insurance Group.
-               Other insurance products are underwritten by ABAP Insurance Company.</p>
-           <br>
-           <a href="www.facebook.com"><img src="pic/fb.png" ></a>
-           <a href="www.instagram.com"><img src="pic/insta.png"></a>
-           <a href="www.twitter.com"><img src="pic/twitter.png"></a>
-           <a href="www.linkedin.com"><img src="pic/linkedin.png"></a>
-           
+               Other insurance products are underwritten by ABAP Insurance Company<br/>.</p>
+         
+       <a href="www.facebook.com"><img style="margin:5px 5px 5px 6px; width:25px; padding:4px;" src="facebook.png"width="30px" height="30px" ></a>
+           <a href="www.instagram.com"><img style="margin:5px 5px 5px 6px;width:25px;height:38px;padding:4px" src="insta.png"width="30px" height="30px"></a>
+           <a href="www.twitter.com"><img style="margin:5px 5px 5px 6px;width:25px;height:40px; padding:4px" src="twitter1.png" width="30px" height="30px"></a>
             </div>
-            <table style="color: #ffffff;">
-                <th><a href="about.jsp"><li>About us</li></a></th><th><a href="sitemap.jsp"><li>Site Map</li></a></th><th><a href="contactus.jsp"><li>Contact us</li></a></th>
-                <tr><td><a href="termsjsp">Terms of Uses</a></td><td><a href="faqs.jsp">FAQS</a></td><td><a href="care.jsp">CustomerCare</a></td></tr>
-                <tr><td><a href="privacy.jsp">Privacy Policy</a></td><td><a href="feedback.jsp">Feedback</a></td></tr>
-            </table>
-       <ul>
-       
-
-       
-   
-      </ul></div>
-    </footer>
-
-    
-
+            <div style=" float:right; width:49%; height: 280px ;color:black;">
+                
+         <table>
+             <tr class="id"> <th class="id"><a href="about.jsp">About us</a></th>
+                <th class="id"> <a href="sitemap.jsp">Site Map</a></th>
+                <th class="id"><a href="contactus.jsp">Contact us</a></th>
+             </tr>
+                
+        <tr class="id">
+            <td class="id"><a href="terms.jsp">Terms of Uses</a></td> 
+            <td class="id">  <a  href="faq.jsp">FAQ</a></td>
+            <td class="id"><a href="care.jsp">Customer Care</a></td>                 
+       </tr>
+       <tr class="id">
+        <td class="id"> <a href="privacy.jsp">Privacy  Policy</a></td>
+         <td class="id"> <a href="feedback.jsp">Feedback</a></td>
+       </tr>
+           </table> </div>
+            </div>
+                  
+    </body>
+</html>
