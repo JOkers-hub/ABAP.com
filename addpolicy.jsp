@@ -1,9 +1,6 @@
-<%-- 
-    Document   : addpolicy
-    Created on : 29 Aug, 2019, 1:45:26 AM
-    Author     : yoyoa
---%>
+<%@page import="java.sql.*" %>
 
+   
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,6 +12,14 @@
         <header>
             <jsp:include page="header.jsp"/>
         </header>
+        <%
+            
+            if(session.getAttribute("savepol")!=null){
+                out.print((String)session.getAttribute("savepol"));
+                session.removeAttribute("savepol");
+                
+            }
+        %>
         
         <h1>Add Policy</h1>
         
@@ -25,11 +30,30 @@
                     <td>category </td>
                     <td><select name="catagory">
                             <option>---Select category---</option>
-                            <option>lifeinsurance</option>
-                            <option>houseinsurance</option>
-                            <option>twowheeler</option>
-                            <option>fourwheeler</option>
-                            <option>comercial</option>
+                            <%
+    try
+    {
+        Connection con = com.abap.register.MyCon.getCon();
+      
+        PreparedStatement st = con.prepareStatement("select * from policycatagory");
+        
+        ResultSet rs = st.executeQuery();
+        while(rs.next())
+        {
+            %>
+            <option value="<%=rs.getString("catagory")%>"> <%=rs.getString("catagory")%></option>
+        
+               
+                
+                           <%
+        }
+        
+    }
+    catch(Exception ex)
+    {
+        out.println(ex);
+    }
+    %>
                             
                         </select></td>
                 </tr>
