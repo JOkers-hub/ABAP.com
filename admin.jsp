@@ -9,12 +9,15 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/CSS" href="css/dashboard.css">
-    <script src="js/lifeinsurance.js"type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/96769d176f.js"></script>
 <title>Admin page</title>
 
 </head>
 <body>
-
+    <header style="width:100%;height:70px;background-image: linear-gradient(to left,skyblue,black);">
+       
+        <i class="fas fa-bell" style="margin:15px 25px 5px 10px; width:25px;height: 30px;float: right; padding:4px;"></i>
+    </header>
     <div class="row">
         <div class="tab">
             
@@ -34,14 +37,14 @@
            <h1>Policy</h1>
               
               <tr>
-                  <td>  <img src="pic/bike1.png"></td>
-                  <td> <img src="pic/car1.jpg"></td>
-                  <td> <img src="pic/home1.jpg"></td>
-                  <td> <img src="pic/life1.jpg"></td>
+                  <td>  <img onclick="openCity(event, 'bike')" src="pic/bike1.png"></td>
+                  <td> <img  src="pic/car1.jpg"></td>
+                  <td> <img  src="pic/home1.jpg"></td>
+                  <td> <img  src="pic/life1.jpg"></td>
                  </tr>
                  <tr>
-                     <td colspan="2"> <img src="pic/commercial1.jpg"></td>
-                     <td colspan="2"> <img src="pic/travel1.png"></td>
+                     <td colspan="2"> <img  src="pic/commercial1.jpg"></td>
+                     <td colspan="2"> <img  src="pic/travel1.png"></td>
                  </tr>
   
             </table>
@@ -187,6 +190,35 @@
         
     </div>
             
+            <div id="bike" class="tabcontent">
+                
+                <%@page import="java.sql.*" %>
+                <%
+                try
+                  {
+                      session.setAttribute("cat", "twowheeler");
+                    Connection con = com.abap.register.MyCon.getCon(); 
+                    PreparedStatement st = con.prepareStatement("select * from twowheeler "); 
+                    ResultSet rs = st.executeQuery();
+                    while(rs.next())
+                     {
+                       %>
+                     <h1>Policies!</h1>
+                      <table>
+                          <tr><th colspan="2">Policy No</th><th colspan="2">Policy Name</th><th colspan="2">Time Priod</th><th colspan="2"> Premium</th><th colspan="2">Amount</th><th colspan="2">Option</th></tr>
+
+                          <tr><td colspan="2"><%=rs.getInt("policyNO")%></td><td colspan="2"><%=rs.getString("policyName")%></td><td colspan="2"><%=rs.getString("period")%> Years </td><td colspan="2"><%=rs.getString("premium")%> /month </td><td colspan="2"> Rs. <%=rs.getString("amount")%></td><td colspan="2"><a href="edit.jsp?id=<%=rs.getInt("policyNO")%>">Edit</a> | <a href="delet.jsp?id=<%=rs.getInt("policyNO")%>">Delete</a></tr>
+                         </table>
+                          <%
+                     }
+        
+                  }catch(Exception ex)
+                    {
+                      out.println(ex);
+                    }
+                  %>
+            </div>
+            
             
         
     </div>
@@ -212,7 +244,33 @@ function openCity(evt, cityName) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+
+
+</script>
+<script>
+    <script type="text/javascript">
+ function loadDoc() {
+  
+
+  setInterval(function(){
+
+   var xhttp = new XMLHttpRequest();
+   xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("noti_number").innerHTML = this.responseText;
+    }
+   };
+   xhttp.open("GET", "data.php", true);
+   xhttp.send();
+
+  },1000);
+
+
+ }
+ loadDoc();
 </script>
 
+</script>
 </body>
 </html>
